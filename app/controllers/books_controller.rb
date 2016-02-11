@@ -40,8 +40,8 @@ class BooksController < ApplicationController
 			render 'edit'
 		end		
 	end
-
-	def destroy
+ 
+ 	def destroy
 		@book.destroy
 		redirect_to root_path
 	end
@@ -49,7 +49,7 @@ class BooksController < ApplicationController
 	private
 
 		def book_params
-			params.require(:book).permit(:title, :description, :author, :category_id)
+			params.require(:book).permit(:title, :description, :author, :category_id, :book_img)
 		end
 
 		def find_book
